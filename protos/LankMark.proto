@@ -1,0 +1,29 @@
+PROTO LankMark [
+  field SFVec3f translation 0.05 0 0.05 
+  field SFRotation rotation  0 1 0 0
+  ]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+        Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 0.501961 1
+              }
+            }
+		geometry Box { size  0.1 0.1 0.5}
+          }
+    ]
+    boundingObject Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 1 1 1
+		specularColor 1 1 1
+              }
+            }
+		geometry Box { size  0.1 0.1 0.5 }
+   }
+  }
+}
